@@ -1,7 +1,13 @@
+@font-face {
+	font-family: 'Munro';
+	src: url('Munro.ttf');
+}
+
 body{
 	width: 360px;
 	height: 640px;
 	position: relative;
+	background-color: #409A9E;
 }
 
 #pusheen{
@@ -9,10 +15,11 @@ body{
 }
 
 h1 {
-	color: green;
-	font-size: 2.5em;
-	font-family: Unkempt, Arial;
-
+	color: #111;
+	font-size: 22px;
+	font-family: "Munro", Arial;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
 }
 
 #checkin-time{
@@ -28,7 +35,8 @@ h1 {
 	width: 100px;
     height: 40px;
     padding: 10px;
-
+	background: url("images/menu.jpg");
+	background-size: 100px 40px;
     font-family: Unkempt, Arial;
 	position: absolute;
 	

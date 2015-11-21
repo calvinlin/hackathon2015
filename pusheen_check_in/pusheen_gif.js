@@ -1,4 +1,9 @@
 var check_in_time = new Date();
+var year = check_in_time.getUTCFullYear().toString();
+var month = check_in_time.getMonth().toString();
+var day = check_in_time.getDate().toString();
+var time = check_in_time.getHours().toString() + ":" + check_in_time.getMinutes().toString();
+var date = year + "-" + month + "-" + day;
 
 function displayImage(obj) {
 	obj.style.display = "block";
@@ -14,8 +19,14 @@ function printCheckin() {
 }
 
 function Checkin_return() {
-	return check_in_time.getUTCFullYear().toString() + "-" + check_in_time.getMonth().toString() + "-" + check_in_time.getDate().toString() + " " + check_in_time.getUTCHours().toString() + ":" + check_in_time.getSeconds().toString();
+	return check_in_time.getUTCFullYear().toString() + "-" + check_in_time.getMonth().toString() + "-" + check_in_time.getDate().toString() + " " + check_in_time.getHours().toString() + ":" + check_in_time.getMinutes().toString();
 }
 
 
 $("#checkin-time").text(printCheckin());
+
+
+
+function checkIn(date, time) {
+	//stuff
+}
