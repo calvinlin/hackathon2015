@@ -1,0 +1,39 @@
+body{
+	width: 360px;
+	height: 640px;
+	position: relative;
+}
+
+#pusheen{
+	max-width: 360px;
+}
+
+h1 {
+	color: green;
+	font-size: 2.5em;
+	font-family: Unkempt, Arial;
+
+}
+
+#checkin-time{
+	color: red;
+	font-size: 16px;
+	font-family: Unkempt, Arial;
+	font-style: italic;
+}
+
+
+.menu-back {
+	
+	width: 100px;
+    height: 40px;
+    padding: 10px;
+
+    font-family: Unkempt, Arial;
+	position: absolute;
+	
+	bottom: 0;
+	right: 0;
+
+	
+}
