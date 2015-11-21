@@ -1,0 +1,190 @@
+@font-face {
+	font-family: 'Munro';
+	src: url('Munro.ttf');
+}
+
+* {
+	box-sizing: border-box;
+	
+	margin: 0;
+	padding: 0;
+	
+	
+	font-family: 'Munro', Arial, sans-serif;	
+}
+
+
+body, html {
+	
+	height: 100%;
+	width: 100%;
+	
+	background: 0px 0px/auto auto repeat url('images/bg_tile.png');
+}
+
+div#header {
+	
+	width: 100%;
+	height: 75px;
+}
+
+	div#header > div {
+		width: 100%;
+	}
+	
+	div#header > div#header-text {
+		height: 65px;
+		
+		background-color: #2a7fff;
+		
+		line-height: 65px;
+		font-size: 30px;
+		color: white;
+		
+		padding: 0 20px;
+		
+		
+	}
+	
+	
+	div#header > div.header-gradient-layer {
+		height: 5px;
+	}
+	
+		div#header > div#header-layer-1 {
+			background: #5599ff;
+		}
+		
+		div#header > div#header-layer-2 {
+			background: #80b3ff;
+		}
+
+
+div.gradient-outer-layer {
+		height: 10px;
+		
+		background-color: green;
+	}
+	
+		div.gradient-outer-layer.gradient-outer-layer-top {
+			border-radius: 10px 10px 0 0;
+		}
+		
+		div.gradient-outer-layer.gradient-outer-layer-bottom {
+			border-radius:  0 0 10px 10px;
+		}
+	
+	
+	div.gradient-inner-layer {
+		height: 5px;
+		
+		background-color: lightgreen;
+	}
+	
+div#container {	
+	position: relative;
+	
+	height: auto;
+	width: 360px;
+	
+	margin: 5px auto 0;
+}
+	
+	div#inventory-container {
+		margin-bottom: 20px;	
+	}
+	
+	ul#inventory-display {
+		max-height: 180px;
+		
+		padding: 10px 5px;
+		
+		background-color: whitesmoke;
+		
+		overflow-y: scroll;
+	}
+	
+		ul#inventory-display > li {
+			list-style: none;
+			padding: 5px;
+			
+			overflow: auto;
+		}
+		
+			ul#inventory-display > li:nth-child(even) {
+				background-color: lightgreen;
+			}
+			
+			ul#inventory-display > li span {
+				display: inline-block;
+			
+				font-size: 20px;
+			}
+			
+			ul#inventory-display > li span.cursor,
+			ul#inventory-display > li span.item-name {
+				float: left
+			} 
+			
+			ul#inventory-display > li span.item-price {
+				float: right;
+			}
+			
+				ul#inventory-display > li span.item-price:before {
+					content: "$";
+				}
+			
+			
+			ul#inventory-display > li span.cursor {
+				visibility: hidden;
+				
+				margin-right: 5px;
+			}
+			
+				ul#inventory-display > li.selected span.cursor {
+					visibility: visible;
+				}
+		
+		
+	div#item-info {
+		height: 270px;
+
+		background-color: whitesmoke;
+		
+		font-size: 20px;	
+	}
+	
+	
+		div#item-info div#item-image {
+			height: 100px;
+					
+			background: center/contain no-repeat lightgrey;
+			
+			line-height: 100px;
+			color: grey;
+			text-align: center;
+		}
+		
+		div#item-quantity-container,
+		div#item-desc {
+			padding: 10px;		
+		}
+		
+		div#item-quantity-container {
+			overflow: auto;
+			
+			width: 100%;
+			
+			background-color: green;
+			
+			color: white;	
+		}
+		
+			
+			div#item-quantity-container span#item-quantity-label {
+				float: left;
+			}
+			
+			div#item-quantity-container span#item-quantity{
+				float: right;
+			}
