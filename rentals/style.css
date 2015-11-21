@@ -151,12 +151,20 @@ div#container {
 
 		background-color: whitesmoke;
 		
-		font-size: 20px;	
+		font-size: 20px;
+		
+		overflow: auto;	
 	}
 	
 	
+		div#item-info div#item-image,
+		div#item-quantity-container {
+			float: left;
+		} 
+	
 		div#item-info div#item-image {
 			height: 100px;
+			width: 240px;
 					
 			background: center/contain no-repeat lightgrey;
 			
@@ -171,20 +179,20 @@ div#container {
 		}
 		
 		div#item-quantity-container {
-			overflow: auto;
+			width: 120px;
+			height: 100px;
 			
-			width: 100%;
+			background-color: grey;
 			
-			background-color: green;
-			
-			color: white;	
+			color: white;
+			text-align: center;
+				
 		}
 		
-			
-			div#item-quantity-container span#item-quantity-label {
-				float: left;
+			div#item-quantity-container div#item-quantity-label {
+				width: 100%;
 			}
 			
-			div#item-quantity-container span#item-quantity{
-				float: right;
-			}
+		div#item-desc {
+			clear: both;
+		}
