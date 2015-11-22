@@ -10,6 +10,34 @@ body {
 	position: relative;
 }
 
+body * {
+	position: absolute;
+	
+}
+
+.back-button {
+	position: absolute;
+	width: 40px;
+	height: 20px;
+
+	background-color: #fffac4;
+	border: 4px solid gray;
+	border-radius: 2px;
+	
+	top: 10px;
+	cursor: pointer;
+}
+
+	#back-text {
+		position:absolute;
+		
+		top: 4px;
+		right: 10px;
+		font-size: 12px;
+		font-family: "Munro", Arial;
+		text-transform: uppercase;
+	}
+
 .clipboard-title {
 	
 	position: absolute;
@@ -32,6 +60,7 @@ body {
 
 .clipboard-icon:hover{
 	bottom: 8px;
+	cursor: pointer;
 }
 	
 	.clipboard {
@@ -58,8 +87,10 @@ body {
 			left: 95%;
 			bottom: 370px;
 			z-index: 1005;
-			
+			cursor: pointer;
 		}
+		
+	
 
 .idcard-title {
 	
@@ -85,6 +116,7 @@ body {
 
 .idcard-icon:hover {
 	bottom: 35px;
+	cursor: pointer;
 }
 
 	.idcard {
@@ -127,6 +159,15 @@ body {
 			top: 85%;
 		}
 		
+		#profile-image { 
+			background: url("images/ID_anteater.png");
+			width: 200px;
+			height: 175px;
+			top: 10px;
+			left: 10%;			
+			
+		}
+		
 		#idcard-close {
 			position: absolute;
 			background: url("images/exit.png");
@@ -136,5 +177,6 @@ body {
 			left: 95%;
 			bottom: 370px;
 			z-index: 1005;
+			cursor: pointer;
 		}
 
