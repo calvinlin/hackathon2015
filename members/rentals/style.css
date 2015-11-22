@@ -167,7 +167,6 @@ div#container {
 			float: left;
 			height: 100px;
 			
-			
 			text-align: center;
 		} 
 	
@@ -184,10 +183,30 @@ div#container {
 			width: 120px;
 			
 			line-height: 80px;
-			color: black;
+			color: white;
+			
+			background-color: green;
 			
 			cursor: pointer;
 		}
+		
+			div#item-info div#item-buy.invalid {
+				background-color: red;
+				
+				color: darkred;
+				cursor: default;
+			}
+			
+			div#item-info div#item-buy.invalid:hover {
+				background-color: red;
+				
+				color: darkred;
+				cursor: default;
+			}
+		
+			div#item-info div#item-buy:hover {
+				color: darkgreen;
+			}
 		
 		div#item-buy,
 		div#item-quantity-container,
