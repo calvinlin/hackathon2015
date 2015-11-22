@@ -17,3 +17,23 @@ function openIDcard() {
 function closeIDcard() {
 	document.getElementById('idcard-open').style.display = 'none';
 }
+
+
+// Print ID info:
+
+function printMembername() {
+	document.getElementById('idcard-membername').innerHTML = "<b>Name:</b><br>Emory Jiang";
+}
+
+function printEmail() {
+	document.getElementById('idcard-email').innerHTML = "<b>Email:</b><br>emjiang@uci.edu";
+}
+
+function printJoindate() {
+	document.getElementById('idcard-joindate').innerHTML = "<b>Join:</b><br>2015/11/21"
+	
+}
+
+printMembername();
+printEmail();
+printJoindate();
