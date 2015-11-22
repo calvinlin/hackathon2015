@@ -34,6 +34,8 @@ function printJoindate() {
 	
 }
 
-printMembername();
-printEmail();
-printJoindate();
+window.onload = function (){
+	printMembername();
+	printEmail();
+	printJoindate();
+}

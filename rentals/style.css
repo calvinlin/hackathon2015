@@ -46,7 +46,6 @@ div#header {
 		
 	}
 	
-	
 	div#header > div.header-gradient-layer {
 		height: 5px;
 	}
@@ -109,6 +108,8 @@ div#container {
 			padding: 5px;
 			
 			overflow: auto;
+			
+			cursor: pointer;
 		}
 		
 			ul#inventory-display > li:nth-child(even) {
@@ -141,8 +142,14 @@ div#container {
 				margin-right: 5px;
 			}
 			
+				ul#inventory-display > li:hover span.cursor {
+					visibility: visible;
+					opacity: 0.5;
+				}
+			
 				ul#inventory-display > li.selected span.cursor {
 					visibility: visible;
+					opacity: 1.0;
 				}
 		
 		
@@ -156,39 +163,59 @@ div#container {
 	
 	
 		div#item-info div#item-image,
-		div#item-quantity-container {
+		div#item-buy {
 			float: left;
+			height: 100px;
+			
+			
+			text-align: center;
 		} 
 	
 		div#item-info div#item-image {
-			height: 100px;
 			width: 240px;
 					
 			background: center/contain no-repeat lightgrey;
 			
 			line-height: 100px;
 			color: grey;
-			text-align: center;
 		}
 		
+		div#item-info div#item-buy{
+			width: 120px;
+			
+			line-height: 80px;
+			color: black;
+			
+			cursor: pointer;
+		}
+		
+		div#item-buy,
 		div#item-quantity-container,
 		div#item-desc {
 			padding: 10px;		
 		}
 		
+		div#item-info-not-inline {
+			clear: both;
+		}
+		
 		div#item-quantity-container {
-			width: 120px;
-			height: 100px;
+			width: 100%;
 			
 			background-color: grey;
 			
 			color: white;
 			text-align: center;
 				
+			overflow: auto;
 		}
 		
-			div#item-quantity-container div#item-quantity-label {
-				width: 100%;
+			div#item-quantity-container span#item-quantity-label {
+				float: left;
+			}
+			
+			div#item-quantity-container span#item-quantity{
+				float: right;
 			}
 			
 		div#item-desc {
@@ -197,5 +224,18 @@ div#container {
 			max-height: 120px;
 		}
 		
-		
-		
+div#back-button {
+	text-align: center;
+	line-height: 20px;
+	
+	padding: 6px;
+    margin: 10px auto;
+    
+    width: 50px;
+	
+    background-color: #fffac4;
+    border: 4px solid gray;
+    border-radius: 2px;
+
+    cursor: pointer;		
+}
