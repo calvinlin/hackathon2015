@@ -3,183 +3,174 @@
 	src: url('Munro.ttf');
 }
 
-body {
-	width: 360px;
-	height: 640px;
+html, body {
+	width: 100%;
+	height: 100%;
 	background-color: #C8E9AC;
+	
 	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-body * {
-	position: absolute;
 	
+	margin: 0;
+	padding: 0;
 }
 
-.back-button {
-	position: absolute;
-	bottom: 0px;
-	left: 140px;
-	text-align: center;
-	padding: 6px;
-    width: 50px;
-    height: 20px;
-
-    background-color: #fffac4;
-    border: 4px solid gray;
-    border-radius: 2px;
-
-    cursor: pointer;
-}
-
-	#back-text {
-		position: relative;
-		font-size: 20px;
-		font-family: "Munro", Arial;
-		text-transform: uppercase;
-	}
-
-.clipboard-title {
-	
-	position: absolute;
-	bottom: 100px;
-	color: #111;
-	font-size: 20px;
+* {
 	font-family: "Munro", Arial;
-	text-transform: uppercase;
-}
-
-.clipboard-icon {
-	width: 80px;
-	height: 90px;
-	padding: 10px;
-	background: url("images/clipboard.png");
-	position: absolute;
-	bottom: 3;
-	left: 2;
-}
-
-.clipboard-icon:hover{
-	bottom: 8px;
-	cursor: pointer;
-}
 	
-	.clipboard {
-		display: none;
-		position: absolute;
-		top: 15%;
-		left: 15%;
-		width: 70%;
-		height: 60%;
+	box-sizing: border-box;
+}
+
+#container {
+	width: 360px;
+	
+	margin: 10px auto;
+	
+	text-align: center;
+}
+
+	.card {
+		margin: 10px auto;
+		
+		width: 252px;
+		height: 384px;
+			
 		background-color: #fffac4;
 		border-radius: 25px;
 		border: 8px solid brown;
-		z-index: 1002;
-	
-		font-family: "Munro", Arial;
-	}
 		
-		#clipboard-close {
-			position: absolute;
-			background: url("images/exit.png");
-			background-size: 30px 30px;
-			width: 30px;
-			height: 30px;
-			left: 95%;
-			bottom: 370px;
-			z-index: 1005;
-			cursor: pointer;
-		}
-		
-	
-
-.idcard-title {
-	
-	position: absolute;
-	bottom: 100px;
-	right: 0px;
-	color: #111;
-	font-size: 20px;
-	font-family: "Munro", Arial;
-	text-transform: uppercase;
-}
-
-.idcard-icon {
-	width: 80px;
-	height: 60px;
-	padding: 10px;
-	position: absolute;
-	background: url("images/ID.png");
-	bottom: 30px;
-	right: 2px;
-	
-}
-
-.idcard-icon:hover {
-	bottom: 35px;
-	cursor: pointer;
-}
-
-	.idcard {
-		display: block;
-		position: absolute;
-		top: 15%;
-		left: 15%;
-		width: 70%;
-		height: 60%;
-		border-radius: 25px;
-		background-color: #fffac4;
-		border: 8px solid #48a6ca;
-		z-index: 1003;
-	
-	
+		font-size: 20px;
+		text-align: left;
 	}
 	
-		#idcard-membername {
-			font-family: "Munro", Arial;
-			font-size: 20px;
-			position: absolute;
-			left: 5%;
-			top: 55%;
-		
+		.card#idcard {
+			border-color: #48a6ca;
 		}
-		
-		#idcard-email {
-			font-family: "Munro", Arial;
-			font-size: 20px;
-			position: absolute;
-			left: 5%;
-			top: 70%;
-		}
-		
-		#idcard-joindate {
-			font-family: "Munro", Arial;
-			font-size: 20px;
-			position: absolute;
-			left: 5%;
-			top: 85%;
-		}
-		
-		#profile-image { 
-			background: url("images/ID_anteater.png");
-			width: 200px;
-			height: 175px;
-			top: 10px;
-			left: 10%;			
+	
+			.card#idcard #profile-image { 
+				background: center/contain no-repeat url("images/ID_anteater.png");
+				width: 100%;
+				height: 200px;		
+			}
 			
+			.card#idcard .id-info-pair {
+				padding: 0 20px;
+				margin: 10px 0;	
+			} 
+			
+				.card#idcard .id-info-pair:first-of-type {
+					margin: 0 0 10px 0;	
+				}
+				
+				.card#idcard .id-info-pair:last-of-type {
+					margin: 10px 0 0 0;	
+				}
+		
+			.card#idcard .id-card-label{
+				font-weight: bold;
+			}
+			
+				.card#idcard .id-card-label:after{
+					content: ":";
+				}
+
+		.card#clipboard {
+			display: none;
+		
+			border-color: brown;
+			
+			padding: 10px;
 		}
 		
-		#idcard-close {
-			position: absolute;
-			background: url("images/exit.png");
-			background-size: 30px 30px;
-			width: 30px;
-			height: 30px;
-			left: 95%;
-			bottom: 370px;
-			z-index: 1005;
-			cursor: pointer;
+		
+			.card#clipboard .rental-item-listing {
+				margin: 10px 0;
+				
+			}
+			
+				.card#clipboard .rental-item-name,
+				.card#clipboard .rental-label{
+					font-weight: bold;
+				}
+				
+				.card#clipboard .rental-times {
+					overflow: auto;				
+				}
+				
+					
+					.card#clipboard .rental-times .rental-checked {
+						float: left;			
+					}
+					
+					.card#clipboard .rental-times .rental-returned {
+						float: right;			
+					}
+					
+						.card#clipboard .rental-times .invalid{
+							color: red;
+						}	
+		
+#bottom-nav {
+	display: inline-block;
+}
+
+#bottom-nav >  div {
+	display: inline-block;
+}
+
+	.button-container {
+		cursor: pointer;
+	}
+		
+	.button-container .button-title {
+		color: #111;
+		font-size: 20px;
+		text-transform: uppercase;
+	}
+	
+		.button-container .button-icon {
+			position: relative;
 		}
+	
+			.button-container:hover .button-icon {
+				bottom: 8px;
+			}
 
+	
+	#idcard-icon {
+		position: relative;
+		
+		width: 80px;
+		height: 60px;
+		
+		margin: 0 auto;
+		
+		background: center/contain no-repeat url("images/ID.png");	
+	}
 
+	#back-button {
+		padding: 10px;
+	    width: 70px;
+	
+	    background-color: #fffac4;
+	    border: 4px solid gray;
+	    border-radius: 2px;
+	
+		text-align: center;
+		line-height: 20px;
+		font-size: 20px;
+		text-transform: uppercase;
+		
+	    cursor: pointer;
+	}
+			
+	#clipboard-icon {
+		position: relative;
+		
+		width: 80px;
+		height: 90px;
+		
+		margin: 0 auto;
+		
+		background: center/contain no-repeat  url("images/clipboard.png");
+		
+	}

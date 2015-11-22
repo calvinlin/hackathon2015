@@ -1,54 +1,95 @@
 <html>
 	<head>
+		<title>eSports Arena - member info</title>
 		<link type="text/css" rel="stylesheet" href="eInfo.css">
 	</head>
 	<body>
-		<div class="clipboard-icon" onclick="openClipboard()"></div>
-		<!--<button type="button" class="clipboard-icon" onclick="openClipboard()" src="images/clipboard.png"></button>-->
-		<div class="idcard-icon" onclick="openIDcard()"></div>
-		<div id="clipboard-open" class="clipboard">
-			<div id="clipboard-close" onclick="closeClipboard()"></div>
-			<div style="width:230px; height:60px; margin:10px; position:relative;">
-				<div style="font-size:20px; font-weight:bold; width:100%; display:block; position:relative;">Fancy Looking Computer</div>
-				<div style="width:100%; display:block; postion:relative;">
-					<div style="float:left; width:65%; display:inline-block; position:relative;"><b>Checked:</b><br>2012-12-12</div>
-					<div style="float:right; width:35%; display:inline-block; postiion:relative;"><b>Returned:</b><br>2012-12-13</div>
+		<div id="container">
+			<div id="idcard" class="card">
+				<div id="profile-image" src="images/ID_anteater.png"></div>
+				<div class="id-info-pair">
+					<div id="idcard-membername-label" class="id-card-label">Name</div>
+					<div id="idcard-membername"></div>
+				</div>
+				<div class="id-info-pair">
+					<div id="idcard-email-label" class="id-card-label">Email</div>
+					<div id="idcard-email"></div>
+				</div>
+				<div class="id-info-pair">
+					<div id="idcard-joindate-label" class="id-card-label">Joined</div>
+					<div id="idcard-joindate"></div>
 				</div>
 			</div>
-			<div style="width:230px; height:60px; margin:10px; position:relative;">
-				<div style="font-size:20px; font-weight:bold; width:100%; display:block; position:relative;">Questionable Potato o_O</div>
-				<div style="width:100%; display:block; postion:relative;">
-					<div style="float:left; width:65%; display:inline-block; position:relative;"><b>Checked:</b><br>2012-01-01</div>
-					<div style="float:right; width:35%; display:inline-block; postiion:relative;"><b>Returned:</b><br>2012-12-31</div>
+			<div id="clipboard" class="card">
+				<div class="rental-item-listing">
+					<div class="rental-item-name">Fancy Looking Computer</div>
+					<div class="rental-times">
+						<div class="rental-checked">
+							<div class="rental-label">Checked:</div>
+							<div class="rental-checked-date">2012-12-12</div>
+						</div>
+						<div class="rental-returned">
+							<div class="rental-label">Returned:</div>
+							<div class="rental-checked-date">2012-12-13</div>
+						</div>
+					</div>
+				</div>
+				<div class="rental-item-listing">
+					<div class="rental-item-name">Questionable Potato o_O</div>
+					<div class="rental-times">
+						<div class="rental-checked">
+							<div class="rental-label">Checked:</div>
+							<div class="rental-checked-date">2012-01-01</div>
+						</div>
+						<div class="rental-returned">
+							<div class="rental-label">Returned:</div>
+							<div class="rental-checked-date">2012-12-31</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="rental-item-listing">
+					<div class="rental-item-name">Our Sleep</div>
+					<div class="rental-times">
+						<div class="rental-checked">
+							<div class="rental-label">Checked:</div>
+							<div class="rental-checked-date">2015-11-20</div>
+						</div>
+						<div class="rental-returned">
+							<div class="rental-label">Returned:</div>
+							<div class="rental-checked-date invalid">N/A</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="rental-item-listing">
+					<div class="rental-item-name">-Yawn-</div>
+					<div class="rental-times">
+						<div class="rental-checked">
+							<div class="rental-label">Checked:</div>
+							<div class="rental-checked-date">2015-11-20</div>
+						</div>
+						<div class="rental-returned">
+							<div class="rental-label">Returned:</div>
+							<div class="rental-checked-date">2015-11-22</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div style="width:230px; height:60px; margin:10px; position:relative;">
-				<div style="font-size:20px; font-weight:bold; width:100%; display:block; position:relative;">Our Sleep</div>
-				<div style="width:100%; display:block; postion:relative;">
-					<div style="float:left; width:65%; display:inline-block; position:relative;"><b>Checked:</b><br>2015-11-20</div>
-					<div style="float:right; width:35%; display:inline-block; postiion:relative;"><b>Returned:</b><br><span style="color:red; font-weight:bold;">N/A</span></div>
+			<div id="bottom-nav">
+				<div id="clipboard-button-container" class="button-container" onclick="openClipboard()">
+					<div id="clipboard-title" class="button-title">Rental History</div>
+					<div id="clipboard-icon" class="button-icon"></div>
+				</div>
+				
+				<div id="back-button" onclick="history.back()">Back</div>
+				
+				<div id="idcard-button-container" class="button-container" onclick="openIDcard()">
+					<div id="idcard-title" class="button-title">Member Info</div>
+					<div id="idcard-icon" class="button-icon"></div>
 				</div>
 			</div>
-			<div style="width:230px; height:60px; margin:10px; position:relative;">
-				<div style="font-size:20px; font-weight:bold; width:100%; display:block; position:relative;">-Yawn-</div>
-				<div style="width:100%; display:block; postion:relative;">
-					<div style="float:left; width:65%; display:inline-block; position:relative;"><b>Checked:</b><br>2015-11-20</div>
-					<div style="float:right; width:35%; display:inline-block; postiion:relative;"><b>Returned:</b><br>2015-11-22</div>
-				</div>
-			</div>
-		</div>
-		<div class="back-button" onclick="history.back()">
-			<div id="back-text">Back</div>
-		</div>
-		<div id="idcard-open" class="idcard">
-			<div id="idcard-close" onclick="closeIDcard()"></div>
-			<div id="idcard-membername"></div>
-			<div id="idcard-email"></div>
-			<div id="idcard-joindate"></div>
-			<div id="profile-image" src="images/ID_anteater.png"></div>
-		</div>
-		<div class="clipboard-title">Rental History</div>
-		<div class="idcard-title">Member Info</div>
+		</div>		
 	</body>
 
 	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
