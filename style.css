@@ -15,7 +15,7 @@ body, html {
 	margin: 0;
 	padding: 0;
 	
-	background: 0px 0px/auto auto repeat url('images/bg_tile.png');
+	background: 0px 0px/auto auto repeat url('images/grass_tile.png');
 }
 
 div#header {
@@ -77,15 +77,15 @@ div#container {
 	}
 	
 		div#container > div.nav-button#membership {
-			background-image: url("images/bg_membership.png");
+			background-image: url("images/einfo2.png");
 		}
 		
 		div#container > div.nav-button#rentals {
-			background-image: url("images/bg_rentals.png");
+			background-image: url("images/emart2.png");
 		}
 		
 		div#container > div.nav-button#check-in{
-			background-image: url("images/bg_checkin.png");
+			background-image: url("images/egym2.png");
 		}
 		
 		
@@ -105,14 +105,15 @@ div#container {
 	
 	div#container > div#bottom-path {
 		height: 60px;
-		background: no-repeat left/cover url("images/bg_bottompath.png");
+		background: no-repeat left/cover url("images/bottom_2.png");
 	}
 	
 				
 	div#container > div.nav-button-separator {
-		height: 16px;
+		height: 46px;
 		
-		background: no-repeat left/contain url("images/bg_gate.png");
+		background: no-repeat left/contain url("images/div_2.png");
+		background-size: 360px 46px;
 	}
 	
 	div#container > div#member-sprite {
@@ -121,9 +122,10 @@ div#container {
 		left: 60px;
 		bottom: 12px;
 		
-		width: 21px;
+		width: 35px;
 		height: 32px;
 		
-		background: no-repeat center/contain url("images/sprite_member.png");
+		background: no-repeat center/contain url("images/anteater_sized.png");
+		background-size:35px 32px;
 	
 	}
