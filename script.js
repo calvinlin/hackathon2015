@@ -13,10 +13,14 @@ var destinationIndex = -1;
 var atDestination = true;
 var isTurned = false;
 
+var destinationLink = null;
+
 var lastTimeoutSet = 0;
 
 var containerElement = null;
 var memberSprite = null;
+
+
 
 function moveSprite(){
 	if (atDestination == false){
@@ -30,6 +34,11 @@ function moveSprite(){
 			if (Math.abs(currentPos[0] - destination[0]) < STEP_SIZE + 2){
 				currentPos[0] = destination[0];
 				atDestination = true;
+				
+				if (destinationLink){
+					window.location.href = destinationLink;
+				}
+				
 			} else {
 				currentPos[0] += Math.sign(destination[0] - currentPos[0]) * STEP_SIZE;
 			}
@@ -55,8 +64,6 @@ function moveSprite(){
 	}
 }
 
-
-
 window.onload = function(){
 	
 	var navButtonNodes = document.body.querySelectorAll("div#container > div.nav-button");
@@ -65,9 +72,11 @@ window.onload = function(){
 	memberSprite = document.getElementById("member-sprite");
 	
 	for (var i = 0; i < navButtonNodes.length ; ++i){
-		navButtonNodes.item(i).addEventListener("mouseover", function (numElement, element){
+		var buttonElement = navButtonNodes.item(i);
+		
+		buttonElement.addEventListener("mouseover", function (numElement, element){
 			function setDestination(event){
-				if (numElement != destinationIndex){
+				if (!destinationLink && numElement != destinationIndex){
 					atDestination = false;
 					
 					destinationIndex = numElement;
@@ -80,6 +89,13 @@ window.onload = function(){
 			}
 			return setDestination;
 		}(navButtonNodes.length - i - 1, navButtonNodes.item(i)));
+		
+		buttonElement.addEventListener("click", function(event){
+			destinationLink = navButtonNodes.item(navButtonNodes.length - destinationIndex - 1).getAttribute("dest");
+			if (atDestination){
+				window.location.href = destinationLink;
+			}
+		});
 	}
 	
 	

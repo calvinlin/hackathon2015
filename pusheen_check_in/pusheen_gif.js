@@ -5,9 +5,6 @@ var day = check_in_time.getDate().toString();
 var time = check_in_time.getHours().toString() + ":" + check_in_time.getMinutes().toString();
 var date = year + "-" + month + "-" + day;
 
-function displayImage(obj) {
-	obj.style.display = "block";
-}
 
 function printCheckin() {
 	var msg = "Your check in time is: ";
@@ -24,7 +21,6 @@ function Checkin_return() {
 
 
 $("#checkin-time").text(printCheckin());
-
 
 
 function checkIn(date, time) {
