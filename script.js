@@ -1,104 +1,85 @@
-var INTERVAL = 5;
-var STEP_SIZE = 2;
+$(document).ready(function() {
+	$('.view').hide();
 
-var BASE_OFFSET_X = 60;
-var BASE_OFFSET_Y = 20;
-
-var DEST_OFFSET_X = 255;
-var DEST_OFFSET_Y = 160;
-
-var currentPos = [60, 12];
-var destination = [0, 0];
-var destinationIndex = -1;
-var atDestination = true;
-var isTurned = false;
-
-var destinationLink = null;
-
-var lastTimeoutSet = 0;
-
-var containerElement = null;
-var memberSprite = null;
-
-function moveSprite(){
-	if (atDestination == false){
-		if (Math.abs(currentPos[1] - destination[1]) < STEP_SIZE + 2){
-			currentPos[1] = destination[1];
-			
-			if (!isTurned){
-				isTurned = true;
-			}
-			
-			if (Math.abs(currentPos[0] - destination[0]) < STEP_SIZE + 2){
-				currentPos[0] = destination[0];
-				atDestination = true;
-				
-				if (destinationLink){
-					var dest = destinationLink;
-					destinationLink = null;
-					window.location.href = dest;
-				}
-				
-			} else {
-				currentPos[0] += Math.sign(destination[0] - currentPos[0]) * STEP_SIZE;
-			}
-			
-		} else if (currentPos[1] != destination[1]){
-			if (isTurned){
-				if (Math.abs(currentPos[0] - BASE_OFFSET_X) < STEP_SIZE + 2){
-					isTurned = false;
-					currentPos[0] = BASE_OFFSET_X;
-				} else {
-					currentPos[0] -= Math.sign(currentPos[0] - BASE_OFFSET_X) * STEP_SIZE;
-				}
-			} else {
-				currentPos[1] += Math.sign(destination[1] - currentPos[1]) * STEP_SIZE;
-			}
-		}
-		
-		memberSprite.style.left = currentPos[0].toString() + "px";
-		memberSprite.style.bottom = currentPos[1].toString() + "px";
-		
-		window.clearTimeout(lastTimeoutSet);
-		lastTimeoutSet = window.setTimeout(moveSprite, INTERVAL);
+	function init() {
+		$('#container').html($('#intro').html());
 	}
-}
 
-window.onload = function(){
-	
-	var navButtonNodes = document.body.querySelectorAll("div#container > div.nav-button");
-	
-	containerElement = document.getElementById("container");
-	memberSprite = document.getElementById("member-sprite");
-	
-	for (var i = 0; i < navButtonNodes.length ; ++i){
-		var buttonElement = navButtonNodes.item(i);
-		
-		buttonElement.addEventListener("mouseover", function (numElement, element){
-			function setDestination(event){
-				if (!destinationLink && numElement != destinationIndex){
-					atDestination = false;
+	$(document).on('click', '.next', function() {
+		var clicked = $(this).attr('id');
+		$('#container input').css('background', 'white');
+
+		switch(clicked) {
+			case 'next_login' : 
+				document.location.href="members/index.html";
+				break;
+
+			case 'next_view1' :
+
+				if($('#firstName').val() == '')
+					$('#firstName').css('background', '#FFB5B5');
+				else if($('#lastName').val() == '')
+					$('#lastName').css('background', '#FFB5B5');
+				else{
+					var firstName = $('#firstName').val();
+					$('#container').html($('#view2').html());
+
+					$('#firstName_val').html(firstName);
+				}
 					
-					destinationIndex = numElement;
-					destination = [DEST_OFFSET_X, containerElement.getBoundingClientRect().bottom - 
-					               element.getBoundingClientRect().bottom + BASE_OFFSET_Y];
 
-					window.clearTimeout(lastTimeoutSet);
-					lastTimeoutSet = window.setTimeout(moveSprite, INTERVAL);
-				}
-			}
-			return setDestination;
-		}(navButtonNodes.length - i - 1, navButtonNodes.item(i)));
-		
-		buttonElement.addEventListener("click", function(event){
-			destinationLink = navButtonNodes.item(navButtonNodes.length - destinationIndex - 1).getAttribute("dest");
-			if (atDestination){
-				var dest = destinationLink;
-				destinationLink = null;
-				window.location.href = dest;
-			}
-		});
-	}
-	
-	
-}
+				break;
+
+			case 'next_view2' :
+
+				if($('#email').val() == '')
+					$('#email').css('background', '#FFB5B5');
+				else if($('#pass1').val() == '')
+					$('#pass1').css('background', '#FFB5B5');
+				else if($('#pass2').val() == '')
+					$('#pass2').css('background', '#FFB5B5');
+				else if($('#pass1').val() != $('#pass2').val())
+					$('#pass1, #pass2').css('background', '#FFB5B5');
+				else
+					$('#container').html($('#view3').html());
+
+				break;
+
+			case 'next_view3' :
+
+				if($('#cc_name').val() == '')
+					$('#cc_name').css('background', '#FFB5B5');
+				else if($('#cc_cardNo').val() == '')
+					$('#cc_cardNo').css('background', '#FFB5B5');
+				else if($('#cc_security').val() == '')
+					$('#cc_security').css('background', '#FFB5B5');
+				else if($('#cc_exp').val() == '')
+					$('#cc_exp').css('background', '#FFB5B5');
+				else
+					document.location.href="members/index.html";
+				
+				break;
+
+			default :
+				document.location.href="members/index.html";
+				break;
+		}
+	});
+
+	$(document).on('click', '#loginBtn', function() {
+		$('#container').html($('#login').html());
+	});
+
+	$(document).on('click', '#registerBtn', function() {
+		$('#container').html($('#view1').html());
+	});
+
+	init();
+
+});
+
+
+
+
+
+

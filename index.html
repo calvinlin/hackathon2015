@@ -1,37 +1,90 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>eSports Arena - Member</title>
-		
-		<link rel="stylesheet" href="style.css" />
-	
-	</head>
+<!DOCTYPE html?
+	<html>
 
-	<body>
-		
-		<div id="header">
-			<div id="header-text">eSports Arena</div>
-			<div id="header-layer-1" class="header-gradient-layer"></div>
-			<div id="header-layer-2" class="header-gradient-layer"></div>
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+	<script type="text/javascript" src="script.js"></script>
+	<title>Test</title>
+</head>
+
+<body>
+	<div id="container">
+
+	</div>
+	
+	<br>
+
+	<div id="intro" class="view">
+		<div class="questionArea">
+			Hello there!  You're not logged in... are you one of us?
 		</div>
-		
-		<div id="container">
-			<div id="membership" class="nav-button" dest="eInfo/eInfo.html">
-				<div class="nav-button-label">MANAGE MEMBERSHIP</div>
-			</div>
-			<div class="nav-button-separator"></div>
-			<div id="rentals" class="nav-button" dest="rentals/index.html">
-				<div class="nav-button-label">RENTALS</div>
-			</div>
-			<div class="nav-button-separator"></div>
-			<div id="check-in" class="nav-button" dest="pusheen_check_in/gif_template.html">
-				<div class="nav-button-label">CHECK IN</div>
-			</div>
-			<div class="nav-button-separator"></div>
-			<div id="bottom-path"></div>
-			<div id="member-sprite"></div>
+		<div class="responseArea">
+			
+			<button type="button" id="loginBtn">YEAH! :D</button><br>
+			<button type="button" id="registerBtn">no... can i join?</button>
 		</div>
-		
-		<script type="text/javascript" src="script.js"></script>
-	</body>
+	</div>
+	
+	<br>
+
+	<div id="login" class="view">
+		<div class="questionArea">
+			Welcome Back!!  Please fill in the stuffs below to get in!
+		</div>
+		<div class="responseArea">
+			<input type="text" id="username" placeholder="Email">
+			<input type="password" id="password" placeholder="Password">
+		</div>
+		<button type="button" id="next_login" class="next">NEXT</button>
+	</div>
+	
+	<br>
+
+	<div id="view1" class="view">
+		<div class="questionArea">
+			Yay!  What's your name?
+		</div>
+		<div class="responseArea">
+			<input type="text" id="firstName" placeholder="First Name">
+			<input type="text" id="lastName" placeholder="Last Name">
+		</div>
+		<button type="button" id="next_view1" class="next">NEXT</button>
+	</div>
+	
+	<br>
+
+	<div id="view2" class="view">
+		<div class="questionArea">
+			Hey&nbsp;<span id="firstName_val">new guy</span>, just a bit more info to join!
+		</div>
+		<div class="responseArea">
+			<input type="email" id="email" placeholder="Email">
+			<input type="password" id="pass1" placeholder="Create Password">
+			<input type="password" id="pass2" placeholder="Confirm Password">
+		</div>
+		<button type="button" id="next_view2" class="next">NEXT</button>
+	</div>
+	
+	<br>
+
+	<div id="view3" class="view">
+		<div class="questionArea">
+			Almost there!  Last step!  :D
+		</div>
+		<div class="responseArea">
+			<input type="text" id="cc_name" placeholder="Name on Card">
+			<input type="password" id="cc_cardNo" placeholder="Credit Card Number">
+			<input type="password" id="cc_security" placeholder="Security Code">
+			<input type="text" id="cc_exp" placeholder="Exp. Date (MM/YYYY)">
+		</div>
+		<button type="button" id="next_view3" class="next">NEXT</button>
+	</div>
+	
+	<br>
+
+</body>
+
 </html>
