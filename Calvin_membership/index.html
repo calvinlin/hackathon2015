@@ -1,0 +1,42 @@
+<!DOCTYPE html?
+	<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+	<script type="text/javascript" src="script.js"></script>
+	<title>Test</title>
+</head>
+
+<body>
+	<div id="container">
+		<div id="pageTitle">Member Information</div>
+		<div style="width:100%; height: 20px; margin-bottom:5px; display:block;">
+			<div style="float:left; width: 350px;">
+				<input type="text" id="searchFilter" style="width:100%" placeholder="search...">
+			</div>
+			<div style="float: right;">
+				<b>Range:</b>&nbsp;<input type="text" id="startDate" class="date" placeholder="start">
+				&nbsp;to&nbsp;
+				<input type="text" id="endDate" class="date" placeholder="end">
+			</div>
+		</div>
+		<table id="memberTable" class="customTableFormat">
+			<thead>
+				<th class="C1">Member ID</th>
+				<th class="C2">Email</th>
+				<th class="C3">First Name</th>
+				<th class="C4">Last Name</th>
+				<th class="C5">Join Date</th>
+				<th class="C6">Amount Check In's</th>
+				<th class="scrollCol"></th>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>

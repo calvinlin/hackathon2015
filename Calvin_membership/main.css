@@ -1,0 +1,119 @@
+body {
+    font-family: "Verdana";
+}
+
+#container {
+    width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pageTitle {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+
+#memberTable.customTableFormat {
+    background-color:#CCC;
+    table-layout: fixed;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    height: calc(100% - 100px);
+    text-align: center;
+}
+
+#memberTable.customTableFormat tbody {
+    background-color: #DDD;
+    overflow: auto;
+    font-size: 15px;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.C1 {
+    width: 80px;
+}
+
+.C2 {
+    width: 210px;
+}
+
+.C3 {
+    width: 120px;
+}
+
+.C4 {
+    width: 150px;
+}
+
+.C5 {
+    width: 110px;
+}
+
+.C6 {
+    width: 120px;
+}
+
+/*----------------------------------------------------------------------------------------------- */
+
+#searchFilter {
+    width: 100%;
+    height: 20px;
+    font-size: 13px;
+}
+
+.date {
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+    height: 20px;
+    font-size: 13px;
+}
+
+.customTableFormat thead {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.customTableFormat thead tr th:not(:first-child) {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-left: 2px solid #DDD;
+}
+
+.customTableFormat thead > tr, .customTableFormat tbody {
+    display: block;
+}
+
+.customTableFormat tbody tr td {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.customTableFormat tbody tr:nth-child(odd) {
+    background-color: #FFF;
+}
+
+.customTableFormat tbody tr:nth-child(even) {
+    background-color: #EEE;
+}
+
+.customTableFormat tbody tr:nth-child(odd) td:not(:first-child) {
+    border-left: 2px solid #FFF;
+}
+
+.customTableFormat tbody tr:nth-child(even) td:not(:first-child) {
+    border-left: 2px solid #EEE;
+}
+
+
+.scrollCol {
+    width: 12.5px;
+}
