@@ -22,6 +22,31 @@ h1 {
 	letter-spacing: 1.5px;
 }
 
+.back-button {
+	position: absolute;
+	width: 40px;
+	height: 20px;
+
+	background-color: #fffac4;
+	border: 4px solid gray;
+	border-radius: 2px;
+	
+	bottom: 50px;
+	right: 45%;
+	cursor: pointer;
+}
+
+	#back-text {
+		position:absolute;
+		
+		top: 4px;
+		right: 10px;
+		font-size: 12px;
+		font-family: "Munro", Arial;
+		text-transform: uppercase;
+	}
+	
+
 #checkin-time{
 	color: red;
 	font-size: 16px;
@@ -30,18 +55,3 @@ h1 {
 }
 
 
-.menu-back {
-	
-	width: 100px;
-    height: 40px;
-    padding: 10px;
-	background: url("images/menu.jpg");
-	background-size: 100px 40px;
-    font-family: Unkempt, Arial;
-	position: absolute;
-	
-	bottom: 0;
-	right: 0;
-
-	
-}
