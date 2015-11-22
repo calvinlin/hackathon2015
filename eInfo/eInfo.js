@@ -1,10 +1,12 @@
 function openClipboard(){
+	document.getElementById('default').style.display = 'none';
 	document.getElementById('clipboard').style.display = 'block'; //open clipboard info popup
 	document.getElementById('idcard').style.display = 'none'; //close ID info popup
 }
 
 
 function openIDcard() {
+	document.getElementById('default').style.display = 'none';
 	document.getElementById('idcard').style.display = 'block'; //open ID info popup
 	document.getElementById('clipboard').style.display = 'none'; //close clipboard if open
 }
