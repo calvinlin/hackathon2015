@@ -1,0 +1,90 @@
+<!DOCTYPE html?
+	<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+	<script type="text/javascript" src="script.js"></script>
+	<title>Test</title>
+</head>
+
+<body>
+	<div id="container">
+
+	</div>
+	
+	<br>
+
+	<div id="intro" class="view">
+		<div class="questionArea">
+			Hello there!  You're not logged in... are you one of us?
+		</div>
+		<div class="responseArea">
+			
+			<button type="button" id="loginBtn">YEAH! :D</button><br>
+			<button type="button" id="registerBtn">no... can i join?</button>
+		</div>
+	</div>
+	
+	<br>
+
+	<div id="login" class="view">
+		<div class="questionArea">
+			Welcome Back!!  Please fill in the stuffs below to get in!
+		</div>
+		<div class="responseArea">
+			<input type="text" id="username" placeholder="Email">
+			<input type="password" id="password" placeholder="Password">
+		</div>
+		<button type="button" id="next_login" class="next">NEXT</button>
+	</div>
+	
+	<br>
+
+	<div id="view1" class="view">
+		<div class="questionArea">
+			Yay!  What's your name?
+		</div>
+		<div class="responseArea">
+			<input type="text" id="firstName" placeholder="First Name">
+			<input type="text" id="lastName" placeholder="Last Name">
+		</div>
+		<button type="button" id="next_view1" class="next">NEXT</button>
+	</div>
+	
+	<br>
+
+	<div id="view2" class="view">
+		<div class="questionArea">
+			Hey&nbsp;<span id="firstName_val">new guy</span>, just a bit more info to join!
+		</div>
+		<div class="responseArea">
+			<input type="email" id="email" placeholder="Email">
+			<input type="password" id="pass1" placeholder="Create Password">
+			<input type="password" id="pass2" placeholder="Confirm Password">
+		</div>
+		<button type="button" id="next_view2" class="next">NEXT</button>
+	</div>
+	
+	<br>
+
+	<div id="view3" class="view">
+		<div class="questionArea">
+			Almost there!  Last step!  :D
+		</div>
+		<div class="responseArea">
+			<input type="text" id="cc_name" placeholder="Name on Card">
+			<input type="password" id="cc_cardNo" placeholder="Credit Card Number">
+			<input type="password" id="cc_security" placeholder="Security Code">
+			<input type="text" id="cc_exp" placeholder="Exp. Date (MM/YYYY)">
+		</div>
+		<button type="button" id="next_view3" class="next">NEXT</button>
+	</div>
+	
+	<br>
+
+</body>
+
+</html>
