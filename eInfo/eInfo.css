@@ -75,7 +75,7 @@ body * {
 		border: 8px solid brown;
 		z-index: 1002;
 	
-	
+		font-family: "Munro", Arial;
 	}
 		
 		#clipboard-close {
