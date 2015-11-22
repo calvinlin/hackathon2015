@@ -8,6 +8,8 @@ body {
 	height: 640px;
 	background-color: #C8E9AC;
 	position: relative;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 body * {
@@ -17,23 +19,23 @@ body * {
 
 .back-button {
 	position: absolute;
-	width: 40px;
-	height: 20px;
+	bottom: 0px;
+	left: 140px;
+	text-align: center;
+	padding: 6px;
+    width: 50px;
+    height: 20px;
 
-	background-color: #fffac4;
-	border: 4px solid gray;
-	border-radius: 2px;
-	
-	top: 10px;
-	cursor: pointer;
+    background-color: #fffac4;
+    border: 4px solid gray;
+    border-radius: 2px;
+
+    cursor: pointer;
 }
 
 	#back-text {
-		position:absolute;
-		
-		top: 4px;
-		right: 10px;
-		font-size: 12px;
+		position: relative;
+		font-size: 20px;
 		font-family: "Munro", Arial;
 		text-transform: uppercase;
 	}
@@ -179,4 +181,5 @@ body * {
 			z-index: 1005;
 			cursor: pointer;
 		}
+
 

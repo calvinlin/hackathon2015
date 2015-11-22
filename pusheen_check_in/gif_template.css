@@ -1,57 +1,63 @@
 @font-face {
-	font-family: 'Munro';
-	src: url('Munro.ttf');
+    font-family: 'Munro';
+    src: url('Munro.ttf');
 }
 
-body{
-	width: 360px;
-	height: 640px;
-	position: relative;
-	background-color: #409A9E;
+body {
+    width: 360px;
+    height: 640px;
+    position: relative;
+    background-color: #409A9E;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#pusheen{
-	max-width: 360px;
+#pusheen {
+    max-width: 360px;
 }
 
 h1 {
-	color: #111;
-	font-size: 22px;
-	font-family: "Munro", Arial;
-	text-transform: uppercase;
-	letter-spacing: 1.5px;
+    color: #111;
+    font-size: 35px;
+    font-family: "Munro", Arial;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 .back-button {
-	position: absolute;
-	width: 40px;
-	height: 20px;
+    position: absolute;
+	bottom: 0px;
+	left: 140px;
+	padding: 6px;
+    width: 50px;
+    height: 20px;
 
-	background-color: #fffac4;
-	border: 4px solid gray;
-	border-radius: 2px;
-	
-	bottom: 50px;
-	right: 45%;
-	cursor: pointer;
+    background-color: #fffac4;
+    border: 4px solid gray;
+    border-radius: 2px;
+
+    cursor: pointer;
 }
 
-	#back-text {
-		position:absolute;
-		
-		top: 4px;
-		right: 10px;
-		font-size: 12px;
-		font-family: "Munro", Arial;
-		text-transform: uppercase;
-	}
-	
-
-#checkin-time{
-	color: red;
-	font-size: 16px;
-	font-family: Unkempt, Arial;
-	font-style: italic;
+#back-text {
+	text-align: center;
+    font-size: 20px;
+    font-family: "Munro", Arial;
+    text-transform: uppercase;
 }
+
+#checkin-time {
+    color: red;
+    font-size: 16px;
+    font-family: Unkempt, Arial;
+    font-style: italic;
+    text-align: center;
+    display: block;
+    border: 4px solid #444;
+    background-color: #fffac4;
+    border-radius: 15px;
+    padding: 3px;
+}
+
 
 
