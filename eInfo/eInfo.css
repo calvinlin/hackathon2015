@@ -1,8 +1,23 @@
+@font-face {
+	font-family: 'Munro';
+	src: url('Munro.ttf');
+}
+
 body {
 	width: 360px;
 	height: 640px;
 	
 	position: relative;
+}
+
+.clipboard-title {
+	
+	position: absolute;
+	bottom: 100px;
+	color: #111;
+	font-size: 20px;
+	font-family: "Munro", Arial;
+	text-transform: uppercase;
 }
 
 .clipboard-icon {
@@ -40,6 +55,17 @@ body {
 			z-index: 1005;
 			
 		}
+
+.idcard-title {
+	
+	position: absolute;
+	bottom: 100px;
+	right: 0px;
+	color: #111;
+	font-size: 20px;
+	font-family: "Munro", Arial;
+	text-transform: uppercase;
+}
 
 .idcard-icon {
 	width: 80px;
