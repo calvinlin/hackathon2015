@@ -20,8 +20,6 @@ var lastTimeoutSet = 0;
 var containerElement = null;
 var memberSprite = null;
 
-
-
 function moveSprite(){
 	if (atDestination == false){
 		if (Math.abs(currentPos[1] - destination[1]) < STEP_SIZE + 2){
@@ -36,7 +34,9 @@ function moveSprite(){
 				atDestination = true;
 				
 				if (destinationLink){
-					window.location.href = destinationLink;
+					var dest = destinationLink;
+					destinationLink = null;
+					window.location.href = dest;
 				}
 				
 			} else {
@@ -93,7 +93,9 @@ window.onload = function(){
 		buttonElement.addEventListener("click", function(event){
 			destinationLink = navButtonNodes.item(navButtonNodes.length - destinationIndex - 1).getAttribute("dest");
 			if (atDestination){
-				window.location.href = destinationLink;
+				var dest = destinationLink;
+				destinationLink = null;
+				window.location.href = dest;
 			}
 		});
 	}
